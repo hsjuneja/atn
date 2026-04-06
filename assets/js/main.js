@@ -101,5 +101,52 @@
 
 		})();
 
+	// Enquiry Form.
+		(function() {
+
+			var form = document.getElementById('signup-form');
+			var submit = form.querySelector('input[type="submit"]');
+
+			var message = document.createElement('p');
+			message.style.marginTop = '1em';
+			message.style.display = 'none';
+			form.appendChild(message);
+
+			form.addEventListener('submit', function(event) {
+				event.preventDefault();
+
+				submit.disabled = true;
+				submit.value = 'Sending...';
+
+				fetch(form.action, {
+					method: 'POST',
+					body: new FormData(form),
+					headers: { 'Accept': 'application/json' }
+				})
+				.then(function(response) {
+					if (response.ok) {
+						form.reset();
+						message.style.display = 'block';
+						message.style.color = '#fff';
+						message.textContent = 'Thank you! We\'ll be in touch soon.';
+						submit.value = 'Get in Touch';
+					} else {
+						message.style.display = 'block';
+						message.style.color = '#f88';
+						message.textContent = 'Something went wrong. Please try again.';
+						submit.disabled = false;
+						submit.value = 'Get in Touch';
+					}
+				})
+				.catch(function() {
+					message.style.display = 'block';
+					message.style.color = '#f88';
+					message.textContent = 'Something went wrong. Please try again.';
+					submit.disabled = false;
+					submit.value = 'Get in Touch';
+				});
+			});
+
+		})();
 
 })();
