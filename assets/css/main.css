@@ -808,7 +808,8 @@ button,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  position: relative; }
+  position: relative;
+  margin-bottom: 4em; }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
   #signup-form input[type="email"],
