@@ -565,6 +565,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
 select,
 textarea {
   -moz-appearance: none;
@@ -592,12 +593,14 @@ textarea {
   input[type="text"]:invalid,
   input[type="password"]:invalid,
   input[type="email"]:invalid,
+  input[type="tel"]:invalid,
   select:invalid,
   textarea:invalid {
     box-shadow: none; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="email"]:focus,
+  input[type="tel"]:focus,
   select:focus,
   textarea:focus {
     -moz-animation: focus 0.1s;
@@ -626,6 +629,7 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
 select {
   height: 2.75em; }
 
@@ -807,7 +811,8 @@ button,
   position: relative; }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
-  #signup-form input[type="email"] {
+  #signup-form input[type="email"],
+  #signup-form input[type="tel"] {
     width: 18em; }
   #signup-form > * {
     margin: 0 0 0 1em; }
@@ -819,9 +824,10 @@ button,
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
-      #signup-form input[type="type"],
+      #signup-form input[type="text"],
       #signup-form input[type="password"],
-      #signup-form input[type="email"] {
+      #signup-form input[type="email"],
+      #signup-form input[type="tel"] {
         width: 100%; }
       #signup-form > * {
         margin: 1.25em 0 0 0; }
