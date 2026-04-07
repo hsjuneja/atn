@@ -129,7 +129,11 @@
 						message.style.display = 'block';
 						message.style.color = '#fff';
 						message.textContent = 'Thank you! We\'ll be in touch soon.';
+						submit.disabled = false;
 						submit.value = 'Get in Touch';
+						window.setTimeout(function() {
+							message.style.display = 'none';
+						}, 4000);
 					} else {
 						message.style.display = 'block';
 						message.style.color = '#f88';
