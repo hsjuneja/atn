@@ -10,24 +10,63 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#businesses {
+				margin: 2em auto 0;
+				max-width: 480px;
+				text-align: center;
+			}
+			#businesses h2 {
+				font-size: 0.85em;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				color: rgba(255,255,255,0.5);
+				margin-bottom: 1.2em;
+			}
+			.business-card {
+				display: block;
+				border: 1px solid rgba(255,255,255,0.25);
+				border-radius: 4px;
+				padding: 1.4em 2em;
+				color: #fff;
+				text-decoration: none;
+				transition: background 0.2s, border-color 0.2s;
+				background: rgba(255,255,255,0.05);
+			}
+			.business-card:hover {
+				background: rgba(255,255,255,0.12);
+				border-color: rgba(255,255,255,0.5);
+			}
+			.business-card strong {
+				display: block;
+				font-size: 1.1em;
+				letter-spacing: 0.05em;
+				margin-bottom: 0.3em;
+			}
+			.business-card span {
+				font-size: 0.85em;
+				color: rgba(255,255,255,0.6);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
 				<h1>Office of HSJ</h1>
-				<p>Growing premium tree nuts in America and delivering them<br />
-				to markets around the world — farm to table, end to end logistics management.</p>
-				<p>Interested in doing business with us? Leave your email address<br />
-				or phone number and we'll be in touch.</p>
+				<p>We specialise in niche items trading and manage end-to-end logistics<br />
+				for export and import operations across the globe — sourcing, shipping,<br />
+				customs, and last-mile delivery, handled from one desk.</p>
 			</header>
 
-		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="https://formspree.io/f/xlgoalpp">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="tel" name="phone" id="phone" placeholder="Phone Number (optional)" />
-				<input type="submit" value="Get in Touch" />
-			</form>
+		<!-- Businesses -->
+			<div id="businesses">
+				<h2>Our Businesses</h2>
+				<a href="atn.html" class="business-card">
+					<strong>Growing American Tree Nuts</strong>
+					<span>Premium tree nuts grown in America, delivered to markets worldwide.</span>
+				</a>
+			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
